@@ -12,7 +12,7 @@ import NotFoundPage from "./pages/NotFoundPage/NotFoundPage";
 
 function App() {
   return (
-    <div>
+    <>
       <Navigation />
       <Routes>
         <Route path="/" element={<HomePage />} />
@@ -24,7 +24,7 @@ function App() {
          */}
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
-    </div>
+    </>
   );
 }
 
