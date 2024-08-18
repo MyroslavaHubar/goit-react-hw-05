@@ -1,5 +1,7 @@
 // import css from './MovieReviews.module.css'
 
-export default function MovieReviews() {
+function MovieReviews() {
   return <div>MovieReviews</div>;
 }
+
+export default MovieReviews;

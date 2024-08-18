@@ -2,7 +2,7 @@
 
 import { InfinitySpin } from "react-loader-spinner";
 
-export default function Loader() {
+function Loader() {
   return (
     <div>
       <InfinitySpin
@@ -14,3 +14,5 @@ export default function Loader() {
     </div>
   );
 }
+
+export default Loader;

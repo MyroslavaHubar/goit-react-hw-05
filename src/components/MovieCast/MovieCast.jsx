@@ -1,5 +1,7 @@
 // import css from './MovieCast.module.css'
 
-export default function MovieCast() {
+function MovieCast() {
   return <div>MovieCast</div>;
 }
+
+export default MovieCast;

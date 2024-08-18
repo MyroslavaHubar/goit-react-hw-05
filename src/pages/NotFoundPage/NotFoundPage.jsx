@@ -1,5 +1,7 @@
 // import css from './NotFoundPage.module.css'
 
-export default function NotFoundPage() {
+function NotFoundPage() {
   return <div>NotFoundPage</div>;
 }
+
+export default NotFoundPage;

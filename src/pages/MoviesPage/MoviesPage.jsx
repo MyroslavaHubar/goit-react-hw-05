@@ -1,5 +1,7 @@
 // import css from './MoviesPage.module.css'
 
-export default function MoviesPage() {
+function MoviesPage() {
   return <div>MoviesPage</div>;
 }
+
+export default MoviesPage;

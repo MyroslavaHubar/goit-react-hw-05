@@ -4,27 +4,27 @@ import { useEffect, useState } from "react";
 import { fetchTrendingMovies } from "../../service/movieApi";
 import Section from "../../components/Section/Section";
 import MovieList from "../../components/MovieList/MovieList";
+import Loader from "../../components/Loader/Loader";
 
-export default function HomePage() {
-  [loading, setLoading] = useState(false);
-  [movies, setMovies] = useState([]);
+function HomePage() {
+  const [loading, setLoading] = useState(false);
+  const [movies, setMovies] = useState([]);
 
-  const fetchMoviesList = async () => {
-    setLoading(true);
-    try {
-      const data = await fetchTrendingMovies();
-      console.log(data);
-      setMovies(data);
-    } catch (err) {
-      console.log(err);
-    } finally {
-      setLoading(false);
-    }
-
-    useEffect(() => {
-      fetchMoviesList();
-    }, []);
-  };
+  useEffect(() => {
+    const fetchMoviesList = async () => {
+      setLoading(true);
+      try {
+        const data = await fetchTrendingMovies();
+        console.log(data);
+        setMovies(data.results);
+      } catch (err) {
+        console.log(err);
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchMoviesList();
+  }, []);
 
   return (
     <Section>
@@ -34,3 +34,5 @@ export default function HomePage() {
     </Section>
   );
 }
+
+export default HomePage;
