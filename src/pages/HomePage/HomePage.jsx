@@ -14,7 +14,7 @@ function HomePage() {
       setLoading(true);
       try {
         const data = await fetchTrendingMovies();
-        console.log(data);
+        // console.log(data);
         setMovies(data.results);
       } catch (err) {
         console.log(err);

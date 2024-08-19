@@ -20,17 +20,17 @@ export const fetchSearchMovie = async (query) => {
   return data;
 };
 
-export const fetchMovieDetails = async (movie_id) => {
-  const { data } = await axios.get(`/movie/${movie_id}`);
+export const fetchMovieDetails = async (movieId) => {
+  const { data } = await axios.get(`/movie/${movieId}`);
   return data;
 };
 
-export const fetchMovieCredits = async (movie_id) => {
-  const { data } = await axios.get(`/movie/${movie_id}/credits`);
+export const fetchMovieCredits = async (movieId) => {
+  const { data } = await axios.get(`/movie/${movieId}/credits`);
   return data;
 };
 
-export const fetchMovieReviews = async (movie_id) => {
-  const { data } = await axios.get(`/movie/${movie_id}/reviews`);
+export const fetchMovieReviews = async (movieId) => {
+  const { data } = await axios.get(`/movie/${movieId}/reviews`);
   return data;
 };
