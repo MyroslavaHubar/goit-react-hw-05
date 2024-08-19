@@ -8,8 +8,6 @@ import NotFoundPage from "./pages/NotFoundPage/NotFoundPage";
 // import MovieReviews from "./components/MovieReviews";
 // import NotFoundPage from "./pages/NotFoundPage";
 
-// import css from "./App.module.css";
-
 function App() {
   return (
     <>

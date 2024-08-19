@@ -9,7 +9,7 @@ const buildLinkClass = ({ isActive }) => {
 function Navigation() {
   return (
     <header className={css.header}>
-      <nav className={css.nav}>
+      <nav className={css.headerNavigation}>
         <NavLink to="/" className={buildLinkClass}>
           Home
         </NavLink>

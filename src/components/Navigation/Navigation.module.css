@@ -1,18 +1,23 @@
 .header {
-  background-color: #0a51a7;
-  padding-bottom: 20px;
-  padding-top: 20px;
+  background-color: #0c0c0c;
+  padding-bottom: 30px;
+  padding-top: 30px;
+  margin-bottom: 10px;
+  -webkit-box-shadow: 0px -18px 17px -5px rgba(239, 198, 139, 0.6) inset;
+  -moz-box-shadow: 0px -18px 17px -5px rgba(239, 198, 139, 0.6) inset;
+  box-shadow: 0px -18px 17px -5px rgba(239, 198, 139, 0.6) inset;
 }
 
-.nav {
+.headerNavigation {
   display: flex;
   gap: 30px;
-  margin-left: 30px;
+  justify-content: center;
 }
 
 .link {
-  color: black;
+  color: rgb(244, 240, 240);
   text-decoration: none;
+  font-size: larger;
 }
 
 .link:hover {
@@ -20,5 +25,5 @@
 }
 
 .active {
-  color: rgb(255, 77, 0);
+  color: rgb(219, 68, 3);
 }

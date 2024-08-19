@@ -1,5 +1,4 @@
-// import css from './HomePage.module.css'
-
+import css from "./HomePage.module.css";
 import { useEffect, useState } from "react";
 import { fetchTrendingMovies } from "../../service/movieApi";
 import Section from "../../components/Section/Section";
@@ -29,7 +28,7 @@ function HomePage() {
   return (
     <Section>
       {loading && <Loader />}
-      <h1>The films that are trending</h1>
+      <h1 className={css.homePageTitle}>The films that are trending!</h1>
       <MovieList movies={movies} />
     </Section>
   );

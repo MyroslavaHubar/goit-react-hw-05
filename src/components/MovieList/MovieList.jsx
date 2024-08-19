@@ -1,13 +1,13 @@
-// import css from './MovieList.module.css'
+import css from "./MovieList.module.css";
 import MovieBackdropPath from "../MovieBackdropPath/MovieBackdropPath";
 
 function MovieList({ movies }) {
   return (
     <div>
-      <ul>
+      <ul className={css.movieList}>
         {movies.map((movie) => {
           return (
-            <li key={movie.id}>
+            <li key={movie.id} className={css.movieListItem}>
               <MovieBackdropPath movie={movie} />
             </li>
           );

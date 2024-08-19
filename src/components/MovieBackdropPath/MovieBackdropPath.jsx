@@ -1,4 +1,4 @@
-// import css from './MovieBackdropPath.module.css'
+import css from "./MovieBackdropPath.module.css";
 import { Link, useLocation } from "react-router-dom";
 
 function MovieBackdropPath({ movie }) {
@@ -7,8 +7,8 @@ function MovieBackdropPath({ movie }) {
   return (
     <>
       <Link state={location} to={`/movies/${movie.id}`}>
-        <img src={imageMovie} alt={movie.title} />
-        <p>{movie.title}</p>
+        <img src={imageMovie} alt={movie.title} className={css.movieImg} />
+        <p className={css.movieName}>{movie.title}</p>
       </Link>
     </>
   );
