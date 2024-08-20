@@ -23,23 +23,28 @@ function MovieCast() {
 
   return (
     <div className={css.movieCastContainer}>
-      <ul>
+      <ul className={css.movieCastList}>
         {cast.map((actor) => {
           const imageActor = actor.profile_path
             ? `https://image.tmdb.org/t/p/w500/${actor.profile_path}`
             : "";
           return (
-            <li key={actor.id}>
+            <li key={actor.id} className={css.movieCastItem}>
               {actor.profile_path ? (
-                <img src={imageActor} alt={actor.name} />
+                <img
+                  src={imageActor}
+                  alt={actor.name}
+                  className={css.movieCastImage}
+                />
               ) : (
-                <div>
-                  <TbPhotoCancel size={35} color="#fafafa" />
+                <div className={css.movieCastIcon}>
+                  <TbPhotoCancel size={80} color="#a3876dec" />
                 </div>
               )}
-
-              <h4>{actor.name}</h4>
-              <p>Character: {actor.character}</p>
+              <h4 className={css.movieCastName}>{actor.name}</h4>
+              <p className={css.movieCastCharacter}>
+                (Character: {actor.character})
+              </p>
             </li>
           );
         })}
