@@ -5,7 +5,7 @@ import { Link, useLocation } from "react-router-dom";
 
 function GoBackBtn() {
   const location = useLocation();
-  const goBack = useRef(location.state?.from ?? "/");
+  const goBack = useRef(location.state ?? "/");
 
   return <Link to={goBack.current}>Go Back</Link>;
 }

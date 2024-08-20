@@ -8,6 +8,7 @@
   width: calc((100% - 70px) / 3);
   border-radius: 5px;
   border: none;
+  margin-top: 20px;
   -webkit-box-shadow: 5px 5px 5px -1px rgba(239, 198, 139, 0.6);
   -moz-box-shadow: 5px 5px 5px -1px rgba(239, 198, 139, 0.6);
   box-shadow: 5px 5px 5px -1px rgba(239, 198, 139, 0.6);
