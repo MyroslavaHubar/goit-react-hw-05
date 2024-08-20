@@ -64,7 +64,7 @@ function MovieDetailsPage() {
       </div>
       <div className={css.movieDetailsInformation}>
         <h3 className={css.movieDetailsInformTitle}>Additional information</h3>
-        <div>
+        <div className={css.movieDetailsLink}>
           <NavLink to="cast" className={buildLinkClass}>
             Cast
           </NavLink>

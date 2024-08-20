@@ -45,3 +45,32 @@
   flex-direction: row;
   gap: 10px;
 }
+
+.movieDetailsInformation {
+  border: 1px solid #d54a04;
+  border-radius: 15px;
+  padding: 15px;
+  margin-bottom: 15px;
+}
+
+.movieDetailsInformTitle {
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #f07c4b;
+}
+
+.movieDetailsLink {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.link {
+  color: rgb(244, 240, 240);
+}
+
+.active {
+  color: rgb(219, 68, 3);
+}

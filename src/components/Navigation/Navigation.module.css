@@ -19,10 +19,6 @@
   font-size: larger;
 }
 
-.link:hover {
-  text-decoration: underline;
-}
-
 .active {
   color: rgb(219, 68, 3);
 }
