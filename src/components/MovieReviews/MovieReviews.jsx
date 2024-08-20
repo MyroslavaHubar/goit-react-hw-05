@@ -1,5 +1,4 @@
-// import css from './MovieReviews.module.css'
-
+import css from "./MovieReviews.module.css";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { fetchMovieReviews } from "../../service/movieApi";
@@ -13,7 +12,6 @@ function MovieReviews() {
       try {
         const dataReviews = await fetchMovieReviews(movieId);
         console.log(dataReviews);
-
         setReviews(dataReviews.results);
       } catch (err) {
         console.log(err);
@@ -23,20 +21,22 @@ function MovieReviews() {
   }, [movieId]);
 
   return (
-    <div>
+    <div className={css.movieReviewsContainer}>
       {reviews && reviews.length > 0 ? (
         <ul>
           {reviews.map((review) => {
             return (
-              <li key={review.id}>
-                <h4>{review.author}</h4>
-                <p>{review.content}</p>
+              <li key={review.id} className={css.movieReviewsItem}>
+                <h4 className={css.movieReviewsAuthor}>{review.author}</h4>
+                <p className={css.movieReviewsContent}>{review.content}</p>
               </li>
             );
           })}
         </ul>
       ) : (
-        <p></p>
+        <p className={css.movieReviewsMessage}>
+          Sorry. But there are no reviews for this film yet.
+        </p>
       )}
     </div>
   );
