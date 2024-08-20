@@ -40,26 +40,30 @@ function MovieDetailsPage() {
     <Section>
       {loading && <Loader />}
       <GoBackBtn />
-      <div>
-        <img src={imageMoviePoster} alt={movieDetails.original_title} />
-        <div>
-          <h2>
+      <div className={css.movieDetailsContainer}>
+        <img
+          src={imageMoviePoster}
+          alt={movieDetails.original_title}
+          className={css.movieDetailsImage}
+        />
+        <div className={css.movieDetails}>
+          <h2 className={css.movieDetailsTitle}>
             {movieDetails.original_title} ({release_date.getFullYear()})
           </h2>
           <p>Use Score: {Math.round(movieDetails.vote_average * 10)}%</p>
-          <h3>Overview</h3>
-          <p>{movieDetails.overview}</p>
-          <h3>Genres</h3>
-          <p>
+          <h3 className={css.movieDetailsOverviewTitle}>Overview:</h3>
+          <p className={css.movieDetailsOverview}>{movieDetails.overview}</p>
+          <h3 className={css.movieDetailsGenresTitle}>Genres:</h3>
+          <ul className={css.movieDetailsGenres}>
             {movieDetails.genres &&
               movieDetails.genres.map((genre) => {
                 return <li key={genre.id}>{genre.name}</li>;
               })}
-          </p>
+          </ul>
         </div>
       </div>
-      <div>
-        <h3>Additional information</h3>
+      <div className={css.movieDetailsInformation}>
+        <h3 className={css.movieDetailsInformTitle}>Additional information</h3>
         <div>
           <NavLink to="cast" className={buildLinkClass}>
             Cast

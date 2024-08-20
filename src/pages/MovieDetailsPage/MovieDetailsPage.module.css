@@ -1,0 +1,47 @@
+.movieDetailsContainer {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 15px;
+  list-style: none;
+}
+
+@media (min-width: 375px) and (max-width: 767px) {
+  .movieDetailsContainer {
+    flex-wrap: wrap;
+  }
+}
+
+.movieDetailsImage {
+  border-radius: 15px;
+}
+
+.movieDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  color: #cc650bec;
+  border: 1px solid #d54a04;
+  border-radius: 15px;
+  padding: 15px;
+}
+
+.movieDetailsTitle {
+  font-weight: 600;
+  font-size: 30px;
+  color: #ec9671;
+  margin-bottom: 10px;
+}
+
+.movieDetailsOverviewTitle,
+.movieDetailsGenresTitle {
+  color: #f07c4b;
+  font-style: italic;
+}
+
+.movieDetailsGenres {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
