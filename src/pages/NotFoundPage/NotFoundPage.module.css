@@ -1,0 +1,9 @@
+.buttonNotPage {
+  padding: 5px 15px;
+  width: 300px;
+  border: 2px solid #ff6f2c;
+  border-radius: 5px;
+  background-color: transparent;
+  color: #ff6f2c;
+  font-size: 17px;
+}
