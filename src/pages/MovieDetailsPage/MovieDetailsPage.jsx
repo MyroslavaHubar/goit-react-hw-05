@@ -40,7 +40,6 @@ function MovieDetailsPage() {
     <Section>
       {loading && <Loader />}
       <GoBackBtn />
-      {}
       <div>
         <img src={imageMoviePoster} alt={movieDetails.original_title} />
         <div>

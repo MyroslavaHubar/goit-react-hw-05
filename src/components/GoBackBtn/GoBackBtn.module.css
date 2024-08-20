@@ -1,0 +1,22 @@
+.buttonGoBack {
+  padding: 10px;
+  min-width: 200px;
+  border: 2px solid #ff6f2c;
+  border-radius: 5px;
+  background-color: transparent;
+  color: #ff6f2c;
+  font-size: 17px;
+  transition: all 0.3s ease;
+  overflow: hidden;
+
+  &:hover {
+    color: #ffffff;
+    border-color: #ffffff;
+    box-shadow: 0 0 15px rgba(255, 111, 44, 0.8);
+  }
+
+  &:active {
+    transform: scale(0.95);
+    box-shadow: 0 0 8px rgba(255, 111, 44, 0.8);
+  }
+}
