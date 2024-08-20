@@ -51,6 +51,26 @@
   border-radius: 15px;
   padding: 15px;
   margin-bottom: 15px;
+  position: relative;
+  animation: glowingBorder 2s infinite;
+}
+
+@keyframes glowingBorder {
+  0% {
+    box-shadow: 0 0 10px rgba(255, 111, 44, 0.2),
+      0 0 20px rgba(255, 111, 44, 0.4);
+    border-color: #d54a04;
+  }
+  50% {
+    box-shadow: 0 0 15px rgba(255, 111, 44, 0.6),
+      0 0 30px rgba(255, 111, 44, 0.8);
+    border-color: #ff6f2c;
+  }
+  100% {
+    box-shadow: 0 0 10px rgba(255, 111, 44, 0.2),
+      0 0 20px rgba(255, 111, 44, 0.4);
+    border-color: #d54a04;
+  }
 }
 
 .movieDetailsInformTitle {

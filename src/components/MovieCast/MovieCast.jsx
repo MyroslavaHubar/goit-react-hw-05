@@ -1,5 +1,4 @@
-// import css from './MovieCast.module.css'
-
+import css from "./MovieCast.module.css";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { fetchMovieCredits } from "../../service/movieApi";
@@ -23,7 +22,7 @@ function MovieCast() {
   }, [movieId]);
 
   return (
-    <div>
+    <div className={css.movieCastContainer}>
       <ul>
         {cast.map((actor) => {
           const imageActor = actor.profile_path
