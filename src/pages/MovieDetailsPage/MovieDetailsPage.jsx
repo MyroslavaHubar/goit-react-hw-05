@@ -58,7 +58,10 @@ function MovieDetailsPage() {
             {movieDetails.original_title}{" "}
             {release_date && `(${release_date.getFullYear()})`}
           </h2>
-          <p>Use Score: {voteAverage !== null ? `${voteAverage}%` : "NaN"}</p>
+          <p>
+            Use Score:{" "}
+            {voteAverage !== null ? `${voteAverage}%` : "Not Available"}
+          </p>
           <h3 className={css.movieDetailsOverviewTitle}>Overview:</h3>
           <p className={css.movieDetailsOverview}>{movieDetails.overview}</p>
           <h3 className={css.movieDetailsGenresTitle}>Genres:</h3>
