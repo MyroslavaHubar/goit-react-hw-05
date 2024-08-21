@@ -1,6 +1,6 @@
 import css from "./MovieDetailsPage.module.css";
 import { fetchMovieDetails } from "../../service/movieApi";
-import { useEffect, useState } from "react";
+import { Suspense, useEffect, useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
 import { NavLink, Outlet, useParams } from "react-router-dom";
 import Section from "../../components/Section/Section";
@@ -84,9 +84,9 @@ function MovieDetailsPage() {
           </NavLink>
         </div>
       </div>
-      <div>
+      <Suspense fallback={<div>Loading subpage...</div>}>
         <Outlet />
-      </div>
+      </Suspense>
       <Toaster position="top-right" reverseOrder={false} />
     </Section>
   );
