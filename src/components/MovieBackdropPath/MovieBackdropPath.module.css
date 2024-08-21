@@ -8,4 +8,10 @@
   text-decoration: none;
   color: #e85309;
   font-size: larger;
+
+  @media (max-width: 767px) {
+    padding-bottom: 5px;
+    font-size: small;
+    padding-left: 3px;
+  }
 }

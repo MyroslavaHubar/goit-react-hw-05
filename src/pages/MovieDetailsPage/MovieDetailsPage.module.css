@@ -5,10 +5,8 @@
   gap: 15px;
   margin-bottom: 15px;
   list-style: none;
-}
 
-@media (min-width: 375px) and (max-width: 767px) {
-  .movieDetailsContainer {
+  @media (max-width: 767px) {
     flex-wrap: wrap;
   }
 }
@@ -25,6 +23,10 @@
   border: 1px solid #d54a04;
   border-radius: 15px;
   padding: 15px;
+
+  @media (max-width: 767px) {
+    gap: 10px;
+  }
 }
 
 .movieDetailsTitle {
@@ -32,6 +34,10 @@
   font-size: 30px;
   color: #ec9671;
   margin-bottom: 10px;
+
+  @media (max-width: 767px) {
+    font-size: 20px;
+  }
 }
 
 .movieDetailsOverviewTitle,

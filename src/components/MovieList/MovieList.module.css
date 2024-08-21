@@ -2,6 +2,10 @@
   display: flex;
   flex-wrap: wrap;
   gap: 35px;
+
+  @media (max-width: 768px) {
+    gap: 15px;
+  }
 }
 
 .movieListItem {
@@ -13,6 +17,11 @@
   -moz-box-shadow: 5px 5px 5px -1px rgba(239, 198, 139, 0.6);
   box-shadow: 5px 5px 5px -1px rgba(239, 198, 139, 0.6);
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+
+  @media (max-width: 768px) {
+    width: calc((100% - 30px) / 3);
+    margin-top: 10px;
+  }
 
   &:hover {
     transform: scale(1.05);

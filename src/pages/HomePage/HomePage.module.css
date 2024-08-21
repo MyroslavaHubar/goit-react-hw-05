@@ -3,4 +3,9 @@
   text-align: center;
   margin-bottom: 15px;
   color: #e85309;
+
+  @media (max-width: 767px) {
+    font-size: 1.5em;
+    margin-bottom: 5px;
+  }
 }

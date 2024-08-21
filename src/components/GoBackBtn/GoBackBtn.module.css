@@ -9,6 +9,11 @@
   transition: all 0.3s ease;
   overflow: hidden;
 
+  @media (max-width: 767px) {
+    padding: 3px 8px;
+    font-size: 15px;
+  }
+
   &:hover {
     color: #ffffff;
     border-color: #ffffff;
