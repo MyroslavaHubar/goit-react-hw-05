@@ -12,8 +12,15 @@ function MovieDetailsPage() {
   const { movieId } = useParams();
   const [movieDetails, setMovieDetail] = useState({});
   const [loading, setLoading] = useState(false);
-  const release_date = new Date(movieDetails.release_date);
-  const imageMoviePoster = `https://image.tmdb.org/t/p/w500/${movieDetails.poster_path}`;
+  const release_date = movieDetails.release_date
+    ? new Date(movieDetails.release_date)
+    : null;
+  const imageMoviePoster = movieDetails.poster_path
+    ? `https://image.tmdb.org/t/p/w500/${movieDetails.poster_path}`
+    : "https://via.placeholder.com/200x300?text=No+Image+Available";
+  const voteAverage = movieDetails.vote_average
+    ? Math.round(movieDetails.vote_average * 10)
+    : null;
 
   const buildLinkClass = ({ isActive }) => {
     return clsx(css.link, isActive && css.active);
@@ -48,9 +55,10 @@ function MovieDetailsPage() {
         />
         <div className={css.movieDetails}>
           <h2 className={css.movieDetailsTitle}>
-            {movieDetails.original_title} ({release_date.getFullYear()})
+            {movieDetails.original_title}{" "}
+            {release_date && `(${release_date.getFullYear()})`}
           </h2>
-          <p>Use Score: {Math.round(movieDetails.vote_average * 10)}%</p>
+          <p>Use Score: {voteAverage !== null ? `${voteAverage}%` : "NaN"}</p>
           <h3 className={css.movieDetailsOverviewTitle}>Overview:</h3>
           <p className={css.movieDetailsOverview}>{movieDetails.overview}</p>
           <h3 className={css.movieDetailsGenresTitle}>Genres:</h3>
