@@ -1,4 +1,3 @@
-import css from "./MoviesPage.module.css";
 import { useEffect, useState } from "react";
 import { fetchSearchMovie } from "../../service/movieApi";
 import { useLocation, useSearchParams } from "react-router-dom";
